@@ -68,7 +68,16 @@ class TestAppState extends State<TestApp> {
     var t = Translations.of(context);
     return Scaffold(
       backgroundColor: Colors.grey,
-      body: SafeArea(child: PageViewMode()),
+      body: SafeArea(
+        child: PageViewMode(
+          isGridModeSelected: isGridModeSelected,
+          onGridModeSelected: (value) {
+            setState(() {
+              isGridModeSelected = value;
+            });
+          },
+        ),
+      ),
     );
   }
 }

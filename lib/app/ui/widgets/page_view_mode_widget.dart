@@ -3,25 +3,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../generated/assets/assets.gen.dart';
 
-class PageViewMode extends StatefulWidget {
-  const PageViewMode({super.key});
+class PageViewMode extends StatelessWidget {
+  String listModeIconPath = Assets.drawables.icList.path;
+  String gridModeIconPath = Assets.drawables.icGrid.path;
 
-  @override
-  State<StatefulWidget> createState() => PageViewModeState();
-}
+  final bool isGridModeSelected;
+  final ValueChanged<bool> onGridModeSelected;
 
-class PageViewModeState extends State<PageViewMode> {
-  final String listModeIconPath = Assets.drawables.icList.path;
-  final String gridModeIconPath = Assets.drawables.icGrid.path;
-
-  bool isGridModeSelected = true;
-
-  onGridModeSelected(bool value) {
-    setState(() {
-      print(isGridModeSelected);
-      isGridModeSelected = value;
-    });
-  }
+  PageViewMode({
+    super.key,
+    required this.isGridModeSelected,
+    required this.onGridModeSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
