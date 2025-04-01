@@ -16,35 +16,18 @@ class BackHomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var colorScheme = Theme.of(context).colorScheme;
     var textTheme = Theme.of(context).textTheme;
-
-    double gap = 10;
     var backgroundColor = colorScheme.surfaceContainer;
     var textWidget = Text(
       text,
       style: textTheme.labelLarge?.copyWith(color: colorScheme.onSurface),
     );
-    if (trailingIcon) {
-      return ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          padding: EdgeInsetsDirectional.fromSTEB(16, 10, 12, 10),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            textWidget,
-            SizedBox(width: gap),
-            Icon(Icons.arrow_forward_ios),
-          ],
-        ),
-      );
-    } else {
-      return ElevatedButton.icon(
-        onPressed: onPressed,
-        label: textWidget,
-        icon: Icon(Icons.arrow_back_ios),
-      );
-    }
+
+    return ElevatedButton.icon(
+      onPressed: onPressed,
+      label: textWidget,
+      style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
+      icon: Icon(Icons.arrow_back_ios),
+      iconAlignment: trailingIcon ? IconAlignment.end : IconAlignment.start,
+    );
   }
 }
