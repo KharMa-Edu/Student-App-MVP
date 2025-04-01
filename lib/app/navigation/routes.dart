@@ -1,4 +1,5 @@
 import 'package:dragomanov_university/app/ui/widgets/menu_container_widget.dart';
+import 'package:dragomanov_university/app/ui/widgets/schedule_card_widget.dart';
 import 'package:dragomanov_university/generated/i18n/translations.g.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -69,13 +70,18 @@ class TestAppState extends State<TestApp> {
     return Scaffold(
       backgroundColor: Colors.grey,
       body: SafeArea(
-        child: PageViewMode(
-          isGridModeSelected: isGridModeSelected,
-          onGridModeSelected: (value) {
-            setState(() {
-              isGridModeSelected = value;
-            });
-          },
+        child: Expanded(
+          child: ScheduleCard(
+            items: [
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 1"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 4"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 5"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 6"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 7"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 8"),
+              ScheduleItemDTO(time: "10:00-12:00", text: "Class 9"),
+            ],
+          ),
         ),
       ),
     );
