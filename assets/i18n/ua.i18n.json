@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Додому"
+  },
+  "Auth": {
+    "header": "Dragomanov University",
+    "description": "Вітаємо у нашому цифровому просторі! Орагнізуйте свої студентські будні.",
+    "email_signin": "Dragomanov University",
+    "google_signin": "Dragomanov University",
+    "privacy_policy(rich)": "Увійшовши у свій профіль ви погоджуєтесь з нашими ${taphere(Умовами надання послуг)}"
+  },
+  "Menu": {
+    "header": "Меню",
+    "info_block": {
+      "header": "Інформаційні ресурси",
+      "website": "Сайт",
+      "faculty_channels": "Канали факультетів",
+      "map_of_buildings_and_dormitories": "Мапа корпусів та гуртожитків",
+      "psychological_support": "Психологічна підтримка"
+    },
+    "university_services": {
+      "header": "Університетські сервіси",
+      "deanery": "Деканат",
+      "dormitory": "Гуртожиток",
+      "mobilization_department": "Мобілізаційний відділ",
+      "payment": "Оплата"
+    },
+    "local_storage_block": {
+      "header": "Локальне сховище",
+      "contacts": "Контакти",
+      "notes": "Нотатки"
+    },
+    "study_block": {
+      "header": "Навчання",
+      "journal": "Журнал",
+      "schedule": "Розклад",
+      "moodle": "Moodle"
+    }
+  },
+  "Home": {
+    "quick_access": "Швидкий доступ"
+  },
+  "Profile": {
+    "header": "Профіль"
+  },
+  "Setting": {
+    "header": "Налаштування",
+    "quick_access": "Швидкий доступ",
+    "notifications": "Сповіщення",
+    "theme_contrast": "Контрастність теми",
+    "language": "Мова"
+  },
+  "AboutApp": {
+    "header": "Довідка",
+    "about_app": "Про продукт",
+    "faq": "Часті питання",
+    "privacy_policy": "Політика конфіденційності"
+  },
+  "Schedule": {
+    "header": "Розклад"
+  },
+  "Journal": {
+    "header": "Журнал"
+  }
+}
