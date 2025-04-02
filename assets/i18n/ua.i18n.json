@@ -5,9 +5,10 @@
   "Auth": {
     "header": "Dragomanov University",
     "description": "Вітаємо у нашому цифровому просторі! Орагнізуйте свої студентські будні.",
-    "email_signin": "Dragomanov University",
-    "google_signin": "Dragomanov University",
-    "privacy_policy(rich)": "Увійшовши у свій профіль ви погоджуєтесь з нашими ${taphere(Умовами надання послуг)}"
+    "email_signin": "Увійти за поштою",
+    "login_signin": "Увійти за логіном",
+    "google_signin": "Увійти за корпоративною поштою",
+    "privacy_policy(rich)": "Увійшовши у свій профіль ви погоджуєтесь з нашими ${taphere(умовами надання послуг)}"
   },
   "Menu": {
     "header": "Меню",

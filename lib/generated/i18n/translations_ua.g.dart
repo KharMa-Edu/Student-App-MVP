@@ -72,10 +72,11 @@ class TranslationsAuthUa {
   // Translations
   String get header => 'Dragomanov University';
   String get description => 'Вітаємо у нашому цифровому просторі! Орагнізуйте свої студентські будні.';
-  String get email_signin => 'Dragomanov University';
-  String get google_signin => 'Dragomanov University';
+  String get email_signin => 'Увійти за поштою';
+  String get login_signin => 'Увійти за логіном';
+  String get google_signin => 'Увійти за корпоративною поштою';
   TextSpan privacy_policy({required InlineSpanBuilder Taphere}) =>
-      TextSpan(children: [const TextSpan(text: 'Увійшовши у свій профіль ви погоджуєтесь з нашими '), Taphere('Умовами надання послуг')]);
+      TextSpan(children: [const TextSpan(text: 'Увійшовши у свій профіль ви погоджуєтесь з нашими '), Taphere('умовами надання послуг')]);
 }
 
 // Path: menu
