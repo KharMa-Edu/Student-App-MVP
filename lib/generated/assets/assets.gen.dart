@@ -15,6 +15,10 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsDrawablesGen {
   const $AssetsDrawablesGen();
 
+  /// File path: assets/drawables/auth_img.png
+  AssetGenImage get authImg =>
+      const AssetGenImage('assets/drawables/auth_img.png');
+
   /// File path: assets/drawables/ic_calendar_range.svg
   SvgGenImage get icCalendarRange =>
       const SvgGenImage('assets/drawables/ic_calendar_range.svg');
@@ -41,12 +45,18 @@ class $AssetsDrawablesGen {
   SvgGenImage get icFilter =>
       const SvgGenImage('assets/drawables/ic_filter.svg');
 
+  /// File path: assets/drawables/ic_grid.svg
+  SvgGenImage get icGrid => const SvgGenImage('assets/drawables/ic_grid.svg');
+
   /// File path: assets/drawables/ic_journal.svg
   SvgGenImage get icJournal =>
       const SvgGenImage('assets/drawables/ic_journal.svg');
 
   /// File path: assets/drawables/ic_link.svg
   SvgGenImage get icLink => const SvgGenImage('assets/drawables/ic_link.svg');
+
+  /// File path: assets/drawables/ic_list.svg
+  SvgGenImage get icList => const SvgGenImage('assets/drawables/ic_list.svg');
 
   /// File path: assets/drawables/ic_map.svg
   SvgGenImage get icMap => const SvgGenImage('assets/drawables/ic_map.svg');
@@ -82,7 +92,8 @@ class $AssetsDrawablesGen {
       const SvgGenImage('assets/drawables/ic_website.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
+    authImg,
     icCalendarRange,
     icClock,
     icContacts,
@@ -90,8 +101,10 @@ class $AssetsDrawablesGen {
     icDormitory,
     icEdit,
     icFilter,
+    icGrid,
     icJournal,
     icLink,
+    icList,
     icMap,
     icMobilizationDepartment,
     icMoodle,
@@ -110,6 +123,83 @@ class Assets {
   static const String package = 'dragomanov_university';
 
   static const $AssetsDrawablesGen drawables = $AssetsDrawablesGen();
+}
+
+class AssetGenImage {
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
+
+  final String _assetName;
+
+  static const String package = 'dragomanov_university';
+
+  final Size? size;
+  final Set<String> flavors;
+
+  Image image({
+    Key? key,
+    AssetBundle? bundle,
+    ImageFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? scale,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = true,
+    bool isAntiAlias = false,
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
+    FilterQuality filterQuality = FilterQuality.medium,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
+    return Image.asset(
+      _assetName,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      semanticLabel: semanticLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
+      width: width,
+      height: height,
+      color: color,
+      opacity: opacity,
+      colorBlendMode: colorBlendMode,
+      fit: fit,
+      alignment: alignment,
+      repeat: repeat,
+      centerSlice: centerSlice,
+      matchTextDirection: matchTextDirection,
+      gaplessPlayback: gaplessPlayback,
+      isAntiAlias: isAntiAlias,
+      package: package,
+      filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
+    );
+  }
+
+  ImageProvider provider({
+    AssetBundle? bundle,
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
+  }) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
+  }
+
+  String get path => _assetName;
+
+  String get keyName => 'packages/dragomanov_university/$_assetName';
 }
 
 class SvgGenImage {
