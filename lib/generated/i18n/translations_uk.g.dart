@@ -7,7 +7,7 @@
 part of 'translations.g.dart';
 
 // Path: <root>
-typedef TranslationsUa = Translations; // ignore: unused_element
+typedef TranslationsUk = Translations; // ignore: unused_element
 
 class Translations implements BaseTranslations<AppLocale, Translations> {
   /// Returns the current translations of the given [context].
@@ -27,13 +27,13 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
        $meta =
            meta ??
            TranslationMetadata(
-             locale: AppLocale.ua,
+             locale: AppLocale.uk,
              overrides: overrides ?? {},
              cardinalResolver: cardinalResolver,
              ordinalResolver: ordinalResolver,
            );
 
-  /// Metadata for the translations of <ua>.
+  /// Metadata for the translations of <uk>.
   @override
   final TranslationMetadata<AppLocale, Translations> $meta;
 
@@ -42,20 +42,20 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
   Translations $copyWith({TranslationMetadata<AppLocale, Translations>? meta}) => Translations(meta: meta ?? this.$meta);
 
   // Translations
-  late final TranslationsNavigationUa navigation = TranslationsNavigationUa.internal(_root);
-  late final TranslationsAuthUa auth = TranslationsAuthUa.internal(_root);
-  late final TranslationsMenuUa menu = TranslationsMenuUa.internal(_root);
-  late final TranslationsHomeUa home = TranslationsHomeUa.internal(_root);
-  late final TranslationsProfileUa profile = TranslationsProfileUa.internal(_root);
-  late final TranslationsSettingUa setting = TranslationsSettingUa.internal(_root);
-  late final TranslationsAboutAppUa about_app = TranslationsAboutAppUa.internal(_root);
-  late final TranslationsScheduleUa schedule = TranslationsScheduleUa.internal(_root);
-  late final TranslationsJournalUa journal = TranslationsJournalUa.internal(_root);
+  late final TranslationsNavigationUk navigation = TranslationsNavigationUk.internal(_root);
+  late final TranslationsAuthUk auth = TranslationsAuthUk.internal(_root);
+  late final TranslationsMenuUk menu = TranslationsMenuUk.internal(_root);
+  late final TranslationsHomeUk home = TranslationsHomeUk.internal(_root);
+  late final TranslationsProfileUk profile = TranslationsProfileUk.internal(_root);
+  late final TranslationsSettingUk setting = TranslationsSettingUk.internal(_root);
+  late final TranslationsAboutAppUk about_app = TranslationsAboutAppUk.internal(_root);
+  late final TranslationsScheduleUk schedule = TranslationsScheduleUk.internal(_root);
+  late final TranslationsJournalUk journal = TranslationsJournalUk.internal(_root);
 }
 
 // Path: navigation
-class TranslationsNavigationUa {
-  TranslationsNavigationUa.internal(this._root);
+class TranslationsNavigationUk {
+  TranslationsNavigationUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -64,8 +64,8 @@ class TranslationsNavigationUa {
 }
 
 // Path: auth
-class TranslationsAuthUa {
-  TranslationsAuthUa.internal(this._root);
+class TranslationsAuthUk {
+  TranslationsAuthUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -80,22 +80,22 @@ class TranslationsAuthUa {
 }
 
 // Path: menu
-class TranslationsMenuUa {
-  TranslationsMenuUa.internal(this._root);
+class TranslationsMenuUk {
+  TranslationsMenuUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
   // Translations
   String get header => 'Меню';
-  late final TranslationsMenuInfoBlockUa info_block = TranslationsMenuInfoBlockUa.internal(_root);
-  late final TranslationsMenuUniversityServicesUa university_services = TranslationsMenuUniversityServicesUa.internal(_root);
-  late final TranslationsMenuLocalStorageBlockUa local_storage_block = TranslationsMenuLocalStorageBlockUa.internal(_root);
-  late final TranslationsMenuStudyBlockUa study_block = TranslationsMenuStudyBlockUa.internal(_root);
+  late final TranslationsMenuInfoBlockUk info_block = TranslationsMenuInfoBlockUk.internal(_root);
+  late final TranslationsMenuUniversityServicesUk university_services = TranslationsMenuUniversityServicesUk.internal(_root);
+  late final TranslationsMenuLocalStorageBlockUk local_storage_block = TranslationsMenuLocalStorageBlockUk.internal(_root);
+  late final TranslationsMenuStudyBlockUk study_block = TranslationsMenuStudyBlockUk.internal(_root);
 }
 
 // Path: home
-class TranslationsHomeUa {
-  TranslationsHomeUa.internal(this._root);
+class TranslationsHomeUk {
+  TranslationsHomeUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -104,8 +104,8 @@ class TranslationsHomeUa {
 }
 
 // Path: profile
-class TranslationsProfileUa {
-  TranslationsProfileUa.internal(this._root);
+class TranslationsProfileUk {
+  TranslationsProfileUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -114,8 +114,8 @@ class TranslationsProfileUa {
 }
 
 // Path: setting
-class TranslationsSettingUa {
-  TranslationsSettingUa.internal(this._root);
+class TranslationsSettingUk {
+  TranslationsSettingUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -128,8 +128,8 @@ class TranslationsSettingUa {
 }
 
 // Path: about_app
-class TranslationsAboutAppUa {
-  TranslationsAboutAppUa.internal(this._root);
+class TranslationsAboutAppUk {
+  TranslationsAboutAppUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -141,8 +141,8 @@ class TranslationsAboutAppUa {
 }
 
 // Path: schedule
-class TranslationsScheduleUa {
-  TranslationsScheduleUa.internal(this._root);
+class TranslationsScheduleUk {
+  TranslationsScheduleUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -151,8 +151,8 @@ class TranslationsScheduleUa {
 }
 
 // Path: journal
-class TranslationsJournalUa {
-  TranslationsJournalUa.internal(this._root);
+class TranslationsJournalUk {
+  TranslationsJournalUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -161,8 +161,8 @@ class TranslationsJournalUa {
 }
 
 // Path: menu.info_block
-class TranslationsMenuInfoBlockUa {
-  TranslationsMenuInfoBlockUa.internal(this._root);
+class TranslationsMenuInfoBlockUk {
+  TranslationsMenuInfoBlockUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -175,8 +175,8 @@ class TranslationsMenuInfoBlockUa {
 }
 
 // Path: menu.university_services
-class TranslationsMenuUniversityServicesUa {
-  TranslationsMenuUniversityServicesUa.internal(this._root);
+class TranslationsMenuUniversityServicesUk {
+  TranslationsMenuUniversityServicesUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -189,8 +189,8 @@ class TranslationsMenuUniversityServicesUa {
 }
 
 // Path: menu.local_storage_block
-class TranslationsMenuLocalStorageBlockUa {
-  TranslationsMenuLocalStorageBlockUa.internal(this._root);
+class TranslationsMenuLocalStorageBlockUk {
+  TranslationsMenuLocalStorageBlockUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 
@@ -201,8 +201,8 @@ class TranslationsMenuLocalStorageBlockUa {
 }
 
 // Path: menu.study_block
-class TranslationsMenuStudyBlockUa {
-  TranslationsMenuStudyBlockUa.internal(this._root);
+class TranslationsMenuStudyBlockUk {
+  TranslationsMenuStudyBlockUk.internal(this._root);
 
   final Translations _root; // ignore: unused_field
 

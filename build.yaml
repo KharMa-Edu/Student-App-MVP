@@ -9,7 +9,7 @@ targets:
     builders:
       slang_build_runner:
         options:
-          base_locale: ua
+          base_locale: uk
           fallback_strategy: base_locale
           input_directory: assets/i18n
           input_file_pattern: .i18n.json

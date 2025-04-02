@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/auth/presentation/auth_screen.dart';
+import '../features/homepager/home_pager_screen.dart';
 
 Page<dynamic> buildPageWithDefaultTransition<T>({
   required BuildContext context,
@@ -44,6 +45,15 @@ final GoRouter router = GoRouter(
             context: c,
             state: s,
             child: AuthScreen(),
+          ),
+    ),
+    GoRoute(
+      path: '/homeScreenPager',
+      pageBuilder:
+          (c, s) => buildPageWithDefaultTransition(
+            context: c,
+            state: s,
+            child: HomePagerScreen(),
           ),
     ),
   ],
