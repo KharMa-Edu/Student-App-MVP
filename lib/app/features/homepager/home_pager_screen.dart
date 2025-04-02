@@ -1,13 +1,18 @@
+import 'package:dragomanov_university/app/features/home/presentation/home_screen.dart';
+import 'package:dragomanov_university/app/features/profile/presentation/profile_screen.dart';
 import 'package:dragomanov_university/app/ui/widgets/home_button_widget.dart';
 import 'package:dragomanov_university/app/ui/widgets/notification_button_widget.dart';
 import 'package:dragomanov_university/app/ui/widgets/page_view_mode_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../generated/i18n/translations.g.dart';
-import '../../ui/theme/theme.dart';
+import '../menu/presentation/menu_screen.dart';
 
 class HomePagerScreen extends StatefulWidget {
+  const HomePagerScreen({super.key});
+
   @override
   State<StatefulWidget> createState() => _HomePagerScreenState();
 }
@@ -32,6 +37,12 @@ class _HomePagerScreenState extends State<HomePagerScreen> {
     );
   }
 
+  int _notificationsCount = 0;
+
+  void _goToNotificationsScreen() {
+    context.push("/notifications");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +51,10 @@ class _HomePagerScreenState extends State<HomePagerScreen> {
         children: [_buildMenuPage(), _buildHomePage(), buildProfilePage()],
       ),
     );
+  }
+
+  Widget _buildPage({required Widget appBar, required Widget content}) {
+    return Column(children: [appBar, SizedBox(height: 10), content]);
   }
 
   Widget _buildPageIndicator() {
@@ -86,37 +101,49 @@ class _HomePagerScreenState extends State<HomePagerScreen> {
 
   Widget _buildMenuPage() {
     var t = Translations.of(context);
-    return _buildAppBar(
-      left: PageViewMode(
-        isGridModeSelected: _isGridModeSelected,
-        onGridModeSelected: _onGridSelected,
+    return _buildPage(
+      appBar: _buildAppBar(
+        left: PageViewMode(
+          isGridModeSelected: _isGridModeSelected,
+          onGridModeSelected: _onGridSelected,
+        ),
+        center: _buildPageIndicator(),
+        right: BackHomeButton(
+          text: t.navigation.home,
+          trailingIcon: true,
+          onPressed: _goToHomePage,
+        ),
       ),
-      center: _buildPageIndicator(),
-      right: BackHomeButton(
-        text: t.navigation.home,
-        trailingIcon: true,
-        onPressed: _goToHomePage,
-      ),
+      content: MenuScreen(isGridViewMode: _isGridModeSelected),
     );
   }
 
   Widget _buildHomePage() {
     var t = Translations.of(context);
-    return _buildAppBar(
-      center: _buildPageIndicator(),
-      right: NotificationButtonWithBadge(onClick: () {}, notificationsCount: 1),
+    return _buildPage(
+      appBar: _buildAppBar(
+        center: _buildPageIndicator(),
+        right: NotificationButtonWithBadge(
+          onClick: _goToNotificationsScreen,
+          notificationsCount: _notificationsCount,
+        ),
+      ),
+      content: HomeScreen(),
     );
   }
 
   Widget buildProfilePage() {
     var t = Translations.of(context);
-    return _buildAppBar(
-      left: BackHomeButton(
-        text: t.navigation.home,
-        trailingIcon: false,
-        onPressed: _goToHomePage,
+    return _buildPage(
+      appBar: _buildAppBar(
+        left: BackHomeButton(
+          text: t.navigation.home,
+          trailingIcon: false,
+          onPressed: _goToHomePage,
+        ),
+        center: _buildPageIndicator(),
       ),
-      center: _buildPageIndicator(),
+      content: ProfileScreen(),
     );
   }
 }
