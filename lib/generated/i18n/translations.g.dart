@@ -6,7 +6,7 @@
 /// Locales: 1
 /// Strings: 38
 ///
-/// Built on 2025-04-02 at 11:10 UTC
+/// Built on 2025-04-02 at 17:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint, unused_import
@@ -17,16 +17,16 @@ import 'package:slang/generated.dart';
 import 'package:slang_flutter/slang_flutter.dart';
 export 'package:slang_flutter/slang_flutter.dart';
 
-part 'translations_ua.g.dart';
+part 'translations_uk.g.dart';
 
 /// Supported locales.
 ///
 /// Usage:
-/// - LocaleSettings.setLocale(AppLocale.ua) // set locale
-/// - Locale locale = AppLocale.ua.flutterLocale // get flutter locale from enum
-/// - if (LocaleSettings.currentLocale == AppLocale.ua) // locale check
+/// - LocaleSettings.setLocale(AppLocale.uk) // set locale
+/// - Locale locale = AppLocale.uk.flutterLocale // get flutter locale from enum
+/// - if (LocaleSettings.currentLocale == AppLocale.uk) // locale check
 enum AppLocale with BaseAppLocale<AppLocale, Translations> {
-  ua(languageCode: 'ua');
+  uk(languageCode: 'uk');
 
   const AppLocale({
     required this.languageCode,
@@ -44,16 +44,16 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
   @override
   Future<Translations> build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver}) async {
     switch (this) {
-      case AppLocale.ua:
-        return TranslationsUa(overrides: overrides, cardinalResolver: cardinalResolver, ordinalResolver: ordinalResolver);
+      case AppLocale.uk:
+        return TranslationsUk(overrides: overrides, cardinalResolver: cardinalResolver, ordinalResolver: ordinalResolver);
     }
   }
 
   @override
   Translations buildSync({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver}) {
     switch (this) {
-      case AppLocale.ua:
-        return TranslationsUa(overrides: overrides, cardinalResolver: cardinalResolver, ordinalResolver: ordinalResolver);
+      case AppLocale.uk:
+        return TranslationsUk(overrides: overrides, cardinalResolver: cardinalResolver, ordinalResolver: ordinalResolver);
     }
   }
 
@@ -129,7 +129,7 @@ class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, Translations> 
 
 /// Provides utility functions without any side effects.
 class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, Translations> {
-  AppLocaleUtils._() : super(baseLocale: AppLocale.ua, locales: AppLocale.values);
+  AppLocaleUtils._() : super(baseLocale: AppLocale.uk, locales: AppLocale.values);
 
   static final instance = AppLocaleUtils._();
 

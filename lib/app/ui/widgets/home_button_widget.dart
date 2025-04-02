@@ -26,7 +26,7 @@ class BackHomeButton extends StatelessWidget {
       onPressed: onPressed,
       label: textWidget,
       style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
-      icon: Icon(Icons.arrow_back_ios),
+      icon: Icon(trailingIcon ? Icons.arrow_forward_ios : Icons.arrow_back_ios),
       iconAlignment: trailingIcon ? IconAlignment.end : IconAlignment.start,
     );
   }

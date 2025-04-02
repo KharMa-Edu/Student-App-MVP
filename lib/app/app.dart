@@ -16,7 +16,10 @@ class App extends StatelessWidget {
     MaterialTheme theme = MaterialTheme(textTheme);
 
     return MaterialApp.router(
-      theme: brightness == Brightness.light ? theme.light() : theme.dark(),
+      darkTheme: theme.dark(),
+      theme: theme.light(),
+      themeMode:
+          brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark,
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: AppLocaleUtils.supportedLocales,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
