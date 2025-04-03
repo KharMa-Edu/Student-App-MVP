@@ -2,8 +2,12 @@ import 'package:flutter/cupertino.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
+  State<StatefulWidget> createState() => TestState();
+}
+
+class TestState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Text("Home");
   }
 }

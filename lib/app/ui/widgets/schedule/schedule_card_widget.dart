@@ -1,4 +1,4 @@
-import 'package:dragomanov_university/app/ui/widgets/schedule_item_widget.dart';
+import 'package:dragomanov_university/app/ui/widgets/schedule/schedule_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class ScheduleDayDTO {
