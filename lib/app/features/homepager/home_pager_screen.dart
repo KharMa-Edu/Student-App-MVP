@@ -54,7 +54,7 @@ class _HomePagerScreenState extends State<HomePagerScreen> {
   }
 
   Widget _buildPage({required Widget appBar, required Widget content}) {
-    return Column(children: [appBar, SizedBox(height: 10), content]);
+    return ListView(children: [appBar, SizedBox(height: 10), content]);
   }
 
   Widget _buildPageIndicator() {
